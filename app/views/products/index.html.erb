@@ -1,0 +1,27 @@
+<h1 class="text-info">Productos en tu carrito</h1>
+
+<table class="table table-striped table-bordered table-hover table-condensed">
+  <thead>
+    <tr class="text-success">
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td class="text-info"><%= product.name  %></td>
+        <td class="text-info"><%= product.price %></td>
+        <td class="text-info"><%= link_to 'Mostrar', product %></td>
+        <td><%= link_to 'Editar producto', edit_product_path(product) , :class => 'btn btn-default' %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo producto', new_product_path, :class => 'btn btn-primary' %>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Store</title>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+   <div class="container-fluid">
+     <div class="navbar-header">
+      <a class="navbar-brand" >shopping cart</a>
+      
+    </div>
+		   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to "Inicio", :controller => "welcome", :action => "index", :class => 'navbar-brand'  %></li>
+	 <li><%= link_to "Carrito", :controller => "products", :action => "index" %></li>      
+        <li><%= link_to "Agregar producto", :controller => "products", :action => "new" %></li>       
+      </ul>
+    </div>
+    </div>
+ </nav>
+
+
+
+<div class="container">
+<%= yield %>
+
+</div>
+</body>
+</html>
